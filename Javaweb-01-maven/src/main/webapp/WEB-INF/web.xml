@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+						http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+id="WebApp_ID" version="4.0">
+
+    <!--配置一些web应用初始化参数-->
+    <context-param>
+        <param-name>url</param-name>
+        <param-value>jdbc:mysql://localhost:3306/mybatis</param-value>
+    </context-param>
+
+    <servlet>
+        <servlet-name>hello</servlet-name>
+        <servlet-class>com.archegos.helloServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>hello</servlet-name>
+        <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>context</servlet-name>
+        <servlet-class>com.archegos.servletContext</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>context</servlet-name>
+        <url-pattern>/context</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>gp</servlet-name>
+        <servlet-class>com.archegos.servletDemo01</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>gp</servlet-name>
+        <url-pattern>/gp</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>sd2</servlet-name>
+        <servlet-class>com.archegos.servletDemo02</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>sd2</servlet-name>
+        <url-pattern>/sd2</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>sd3</servlet-name>
+        <servlet-class>com.archegos.servletDemo03</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>sd3</servlet-name>
+        <url-pattern>/sd3</url-pattern>
+    </servlet-mapping>
+
+</web-app>
